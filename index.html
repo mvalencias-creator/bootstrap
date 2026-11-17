@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Flexbox Bootstrap 5</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos básicos para visualizar las cajas */
+        .caja {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px;
+            border: 2px solid #0a58ca;
+            text-align: center;
+            font-weight: bold;
+        }
+        .contenedor-demo {
+            background-color: #e9ecef;
+            border: 2px dashed #6c757d;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="mb-5 text-center">Herramientas Flexbox en Bootstrap 5</h1>
+
+        <!-- 1. DISPLAY, DIRECCIÓN Y JUSTIFICACIÓN -->
+        <h3 class="mt-4">1. d-flex, flex-row y justify-content-between</h3>
+        <p>Activa flexbox en fila y distribuye el espacio uniformemente entre los elementos.</p>
+        <div class="d-flex flex-row justify-content-between contenedor-demo p-3 mb-4">
+            <div class="caja">Item 1</div>
+            <div class="caja">Item 2</div>
+            <div class="caja">Item 3</div>
+        </div>
+
+        <!-- 2. ALINEACIÓN VERTICAL (ALIGN-ITEMS) Y COLUMNA REVERSA -->
+        <h3 class="mt-4">2. flex-column-reverse y align-items-center</h3>
+        <p>Ordena los elementos en columna de abajo hacia arriba y los centra horizontalmente.</p>
+        <div class="d-flex flex-column-reverse align-items-center contenedor-demo p-3 mb-4">
+            <div class="caja mb-2">Item 1 (Abajo)</div>
+            <div class="caja mb-2">Item 2 (Medio)</div>
+            <div class="caja mb-2">Item 3 (Arriba)</div>
+        </div>
+
+        <!-- 3. ENVOLVIMIENTO (WRAP) Y ALINEACIÓN DE CONTENIDO (ALIGN-CONTENT) -->
+        <h3 class="mt-4">3. flex-wrap y align-content-around</h3>
+        <p>Permite que los elementos pasen a la siguiente línea si no caben, y distribuye el espacio entre las líneas.</p>
+        <div class="d-flex flex-wrap align-content-around contenedor-demo p-3 mb-4" style="height: 350px;">
+            <div class="caja w-25">Caja A</div>
+            <div class="caja w-25">Caja B</div>
+            <div class="caja w-25">Caja C</div>
+            <div class="caja w-25">Caja D</div>
+            <div class="caja w-25">Caja E</div>
+            <div class="caja w-25">Caja F</div>
+        </div>
+
+        <!-- 4. COMPORTAMIENTO INDIVIDUAL: GROW, ALIGN-SELF Y ORDER -->
+        <h3 class="mt-4">4. flex-grow, align-self-end y order</h3>
+        <p>Controla el comportamiento específico de cada hijo: crecimiento para ocupar el espacio sobrante, alineación propia y cambio de orden visual.</p>
+        <div class="d-flex align-items-start contenedor-demo p-3 mb-4">
+            <div class="caja order-2">1 (Orden 2)</div>
+            <div class="caja flex-grow-1 order-1 bg-success">2 (Grow 1, Orden 1)</div>
+            <div class="caja order-3 align-self-end bg-danger">3 (Align-self-end, Orden 3)</div>
+        </div>
+
+        <!-- 5. RELLENO EQUITATIVO (FILL) -->
+        <h3 class="mt-4">5. flex-fill</h3>
+        <p>Fuerza a todos los elementos hermanos a tener el mismo ancho, ocupando todo el espacio disponible.</p>
+        <div class="d-flex contenedor-demo p-3 mb-4">
+            <div class="caja flex-fill">Bloque A</div>
+            <div class="caja flex-fill">Bloque B</div>
+            <div class="caja flex-fill">Bloque C</div>
+        </div>
+    </div>
+</body>
+</html>
